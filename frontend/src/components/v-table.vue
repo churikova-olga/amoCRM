@@ -7,8 +7,8 @@
   </div>
 
   <hr style="border: 1px #f0f0f0 solid"/>
-  <div v-if="flag === false">
-    Данные грузятся.... <LoadingOutlined />
+  <div class="v-not-data" v-if="flag === false">
+    <LoadingOutlined /> <span>Данные грузятся....</span>
   </div>
 <div v-else>
 
@@ -172,5 +172,7 @@ export default defineComponent({
 .v-search:hover{
   border: 1px solid cornflowerblue;
 }
-
+.v-not-data{
+  text-align: center;
+}
 </style>
